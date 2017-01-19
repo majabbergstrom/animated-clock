@@ -8,20 +8,43 @@ html {
   width: 300px;
 
   background: transparent url("../images/clock-face.svg") no-repeat center center;
+  position: relative;
 }
 
 .center {
   width: 28px;
+  position: absolute;
+  top: 8.5em;
+  left: 8.5em;
 }
 
 .hand {
   width: 14px;
+  position: absolute;
+  top: 4em;
+  left: 8.95em;
 }
 
 .hand-hour {
+  transform-origin: bottom;
+  top: 5.5em;
+  animation: turn 6s linear infinite;
 
 }
 
 .hand-minute {
+  transform-origin: bottom;
+  animation: turn 1s linear infinite;
+}
+
+@keyframes turn {
+
+  0% {
+    transform: rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate();
+  }
 
 }
